@@ -31,8 +31,8 @@ public class Review05 {
             pstmt = con.prepareStatement(sql);
 
             // 5, 6. Select文の実行と結果を格納／代入
-            System.out.print("検索キーワードを入力してください > ");
-            String input = keyIn();
+            System.out.print("idを入力してください > ");
+            String input = setIn();
 
             // PreparedStatementオブジェクトの?に値をセット
             pstmt.setString(1, input);
@@ -85,10 +85,7 @@ public class Review05 {
         }
     }
 
-    /*
-     * キーボードから入力された値をStringで返す 引数：なし 戻り値：入力された文字列
-     */
-    private static String keyIn() {
+    private static String setIn() {
         String line = null;
         try {
             BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
